@@ -107,30 +107,32 @@ body {
   background: #304577;
   background: linear-gradient(
     333deg,
-    rgba(48, 69, 119, 1) 16%,
-    rgba(55, 77, 129, 1) 55%,
-    rgba(76, 101, 160, 1) 100%
+    rgba(48, 69, 119, 1) 9%,
+    rgba(55, 77, 129, 1) 33%,
+    rgba(76, 101, 160, 1) 62%
   );
 
   width: 400px;
   height: 360px;
   padding: 8px 16px;
   border-radius: 16px;
-  box-sizing: border-box;
-  color: #fff;
+  /* box-sizing: border-box; */
+  box-shadow: 20px 20px 60px 10px #374b7c66;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .timer-title {
   font-size: 24px;
   font-weight: 700;
+  color: #fff;
   margin: 48px 0 23px;
 }
 
-hr {
+.main-container > hr {
   width: 312px;
   color: #3d538a;
   margin-bottom: 32px;
@@ -139,7 +141,7 @@ hr {
 .time-container {
   width: 284px;
   display: flex;
-  /* gap: 22px; */
+  gap: 22px;
 }
 
 .time-wrap {
@@ -155,6 +157,7 @@ hr {
 
 /* .time-wrap::after {
   content: "";
+  position: absolute;
   display: inline-block;
   width: 6px;
   height: 24px;
@@ -182,13 +185,22 @@ hr {
     rgba(55, 77, 129, 1) 55%,
     rgba(76, 101, 160, 1) 100%
   );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
-  width: 53px;
+  /* width: 53px; */
+  text-align: center;
   background-color: transparent;
   border: none;
   outline: none;
+
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
 }
 
 input::placeholder {
@@ -199,10 +211,46 @@ input::placeholder {
 button {
   width: 112px;
   padding: 15px 23px;
+  background-color: #324577;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 1px 1px 1px 0px #0000000d inset;
+
+  cursor: pointer;
 }
 
 button > p {
   font-family: "Pretendard";
   font-size: 14px;
   font-weight: 700;
+  color: #617199;
+}
+
+.play-btn {
+  margin-right: 12px;
+}
+
+.play-btn > p::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/icon-start-disabled.svg) no-repeat;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.reset-btn > p::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/icon-reset-disabled.svg) no-repeat;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+footer > p {
+  font-size: 14px;
+  color: #8596bf;
 }

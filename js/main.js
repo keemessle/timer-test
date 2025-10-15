@@ -4,3 +4,28 @@
 // 4. 다시 start 누르면 재시작
 // 5. 0초가 되면 초기화
 // 6. Reset을 누르면 초기화
+
+const hourInput = document.getElementById("hour");
+const minuteInput = document.getElementById("minute");
+const secondInput = document.getElementById("second");
+const playBtn = document.querySelector(".play-btn");
+const resetBtn = document.querySelector(".reset-btn");
+
+let timer;
+let inRunning = false;
+
+function startTimer() {
+  timer = setInterval(() => {}, 1000);
+}
+
+function stopTimer() {}
+
+function resetTimer() {
+  clearInterval(timer);
+}
+
+playBtn.addEventListener("click", () => {
+  playBtn.querySelector("p").textContent = "STOP";
+  playBtn.querySelector("p");
+  startTimer();
+});

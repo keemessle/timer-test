@@ -25,26 +25,26 @@
           <li class="time-wrap">
             <p>HRS</p>
             <div class="time-input">
-              <input type="number" />
+              <input type="number" id="hour" min="00" max="99" value="00" />
             </div>
           </li>
           <li class="time-wrap">
             <p>MIN</p>
             <div class="time-input">
-              <input type="number" />
+              <input type="number" id="minute" min="00" max="59" value="00" />
             </div>
           </li>
           <li class="time-wrap">
             <p>SEC</p>
             <div class="time-input">
-              <input type="number" />
+              <input type="number" id="second" min="00" max="99" value="00" />
             </div>
           </li>
         </ul>
 
         <div class="btn-container">
-          <button><p>START</p></button>
-          <button><p>RESET</p></button>
+          <button class="play-btn"><p>START</p></button>
+          <button type="reset" class="reset-btn"><p>RESET</p></button>
         </div>
       </section>
     </main>
