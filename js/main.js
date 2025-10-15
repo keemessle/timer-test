@@ -12,7 +12,9 @@ const playBtn = document.querySelector(".play-btn");
 const resetBtn = document.querySelector(".reset-btn");
 
 let timer;
-let inRunning = false;
+let isRunning = false;
+
+function totalTime() {}
 
 function startTimer() {
   timer = setInterval(() => {}, 1000);
@@ -25,7 +27,13 @@ function resetTimer() {
 }
 
 playBtn.addEventListener("click", () => {
-  playBtn.querySelector("p").textContent = "STOP";
-  playBtn.querySelector("p");
-  startTimer();
+  if (!isRunning) {
+    isRunning = true;
+    playBtn.querySelector("p").textContent = "STOP";
+    startTimer();
+  } else {
+    isRunning = false;
+    playBtn.querySelector("p").textContent = "START";
+    stopTimer();
+  }
 });
